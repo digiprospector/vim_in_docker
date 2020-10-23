@@ -10,7 +10,7 @@ COPY    vimrc.local /root/.vimrc.local
 COPY    vimrc.local.bundles /root/.vimrc.local.bundles
 
 #install
-RUN     buildDeps='gcc make libncurses5-dev g++ liblua5.3-dev libz-dev libtinfo5 cmake' InstallPkg='libpython3-dev git curl python3 ca-certificates ssh' \
+RUN     buildDeps='gcc make libncurses5-dev g++ liblua5.3-dev libz-dev libtinfo5 cmake' InstallPkg='libpython3-dev git curl python3 ca-certificates ssh flake8' \
         && apt update \
         && apt -y install $buildDeps $InstallPkg --no-install-recommends \
         && cd /root && git clone https://github.com/vim/vim.git \

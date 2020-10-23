@@ -1,2 +1,9 @@
 let g:airline_powerline_fonts = 1
 set background=dark
+set fdm=indent
+
+set colorcolumn=99
+
+let g:ale_python_flake8_options='--ignore=E501'
+
+:nnoremap <space> za
